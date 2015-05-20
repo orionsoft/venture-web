@@ -1,0 +1,74 @@
+<template name="homeEnterprises">
+	<div class="enterprises">
+		<div class="container">
+			{{# if Template.subscriptionsReady }}
+				<div class="row">
+					{{# each enterprises }}
+						<div class="col-sm-12">
+							{{> homeEnterprisesEnterprise }}
+						</div>
+					{{/ each }}
+				</div>
+				
+			{{ else }}
+				loading...
+			{{/ if }}
+		</div>
+	</div>
+</template>
+
+<template name="homeEnterprisesEnterprise">
+	<div class="row enterprise">
+		<div class="col-sm-7">
+			<img class="image" src="{{ image.url }}">
+		</div>
+		<div class="col-sm-5">
+			<h3 class="title">{{ title }}</h3>
+			<h5 class="subtitle">{{ subtitle }}</h5>
+			<p class="location"><i class="fa fa-fw fa-map-marker"></i> {{ location }}</p>
+			{{# if dueDate }}
+				<p class="due-date">
+					<i class="fa fa-fw fa-clock-o"></i> {{ daysLeft }}
+				</p>
+			{{/ if }}
+			{{# if funded }}
+				<div class="status">
+					<div class="progress">
+						<div class="progress-bar" style="width: {{ getCompletedPercentage }}%;">
+							<span class="sr-only">{{ getCompletedPercentage }}% Complete</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-5">
+							<p>
+								<span class="label label-danger">{{ toCurrency funded }}</span>
+								Funded
+							</p>
+						</div>
+						<div class="col-xs-5">
+							<p>
+								<span class="label label-danger">{{ toCurrency pledged }}</span>
+								Pledged
+							</p>
+						</div>
+					</div>
+				</div>
+			{{/ if }}
+			<div class="info">
+				<table class="table">
+					<tbody>
+						{{# each info }}
+							<tr>
+								<td><b>{{ label }}</b></td>
+								<td>{{ val }}</td>
+							</tr>
+						{{/ each }}
+					</tbody>
+				</table>
+			</div>
+			<p>
+				<a class="btn btn-primary" href="{{ moreInfoLink }}">Mas información</a>
+			</p>
+		</div>
+	</div>
+</template>

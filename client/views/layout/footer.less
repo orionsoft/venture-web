@@ -1,0 +1,40 @@
+@background-color: #000;
+@text-color: #fff;
+
+.footer {
+	background-color: @background-color;
+	padding: 40px 0;
+	color: @text-color;
+
+	a {
+		color: @text-color;
+	}
+
+	.copyright {
+		color: darken(@text-color, 30%);
+	}
+
+	h3, h3 a {
+		font-size: 14pt;
+		color: darken(@text-color, 15%);
+	}
+
+	.pages-item {
+		margin: 3px 0;
+		font-size: 10pt;
+	}
+
+	.links {
+		margin-top: 15px;
+		font-size: 18px;
+
+		a {
+			color: #b3b3b3;
+			margin: 0 6px;
+			&:hover {
+				text-decoration: none;
+				color: #fff;
+			}
+		}
+	}
+}

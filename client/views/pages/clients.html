@@ -1,0 +1,26 @@
+<template name="clients">
+  <br>
+  <div class="container pagesSimple">
+    <h1 class="page-title">Clientes</h1>
+    <hr>
+
+    <div class="content clients">
+      <div class="row">
+        {{# each clients }}
+          <div class="col-sm-6 col-md-4 clients-item">
+            <div class="">
+              <img src="{{ image.url }}">
+            </div>
+            <h3>{{ name }}</h3>
+            <p>{{ description }}</p>
+            <p>
+              <a href="{{ web }}">{{ web }}</a>
+            </p>
+          </div>
+        {{/ each }}
+      </div>
+      
+    </div>
+    <br><br>
+  </div>
+</template>

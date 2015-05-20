@@ -1,0 +1,15 @@
+<template name="homeLogos">
+	<div class="home-logos">
+		<div class="container">
+			{{# if Template.subscriptionsReady }}
+				{{# each logos }}
+					<a href="{{ url }}" target="_BLANK" class="logo-item">
+						<img src="{{ image.url }}" alt="{{ name }}">
+					</a>
+				{{/ each }}
+			{{ else }}
+				loading...
+			{{/ if }}
+		</div>
+	</div>
+</template>
