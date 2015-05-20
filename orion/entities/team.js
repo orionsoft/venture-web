@@ -13,7 +13,8 @@ orion.addEntity('team', {
     },
     email: {
         type: String,
-        label: "email"
+        label: "email",
+        optional: true
     },
     image: orion.attribute('file', {
         label: 'Image'
