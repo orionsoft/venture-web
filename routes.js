@@ -2,6 +2,7 @@ var afterAction = function() {
   if (!Meteor.isClient) {
     return;
   }
+  ga('send', 'pageview');
   SEO.set({
     title: orion.dictionary.get('seoTitle'),
     link: {
