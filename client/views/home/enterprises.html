@@ -18,10 +18,14 @@
 </template>
 
 <template name="homeEnterprisesEnterprise">
+	<br>
 	<div class="row enterprise">
 		<div class="col-sm-7">
 			{{# if youtubeVideoCode }}
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ youtubeVideoCode }}" frameborder="0" allowfullscreen></iframe>
+				<br>
+				<div class="embed-responsive embed-responsive-16by9">
+				  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ youtubeVideoCode }}" allowfullscreen></iframe>
+				</div>
 			{{ else }}
 				<img class="image" src="{{ image.url }}">
 			{{/ if }}
