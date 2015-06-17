@@ -15,6 +15,10 @@ orion.addEntity('enterprises', {
         label: 'Image',
         optional: true
     }),
+    youtubeVideoCode: {
+        type: String,
+        optional: true
+    },
     pledged: {
         type: Number,
         optional: true
@@ -39,7 +43,8 @@ orion.addEntity('enterprises', {
     },
     moreInfoLink: {
         type: String,
-        label: "More Info Link"
+        label: "More Info Link",
+        optional: true
     },
 }, {
     icon: 'suitcase',

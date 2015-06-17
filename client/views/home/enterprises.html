@@ -20,7 +20,11 @@
 <template name="homeEnterprisesEnterprise">
 	<div class="row enterprise">
 		<div class="col-sm-7">
-			<img class="image" src="{{ image.url }}">
+			{{# if youtubeVideoCode }}
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ youtubeVideoCode }}" frameborder="0" allowfullscreen></iframe>
+			{{ else }}
+				<img class="image" src="{{ image.url }}">
+			{{/ if }}
 		</div>
 		<div class="col-sm-5">
 			<h3 class="title">{{ title }}</h3>
@@ -66,9 +70,11 @@
 					</tbody>
 				</table>
 			</div>
-			<p>
-				<a class="btn btn-primary" href="{{ moreInfoLink }}">Mas información</a>
-			</p>
+			{{# if moreInfoLink }}
+				<p>
+					<a class="btn btn-primary" href="{{ moreInfoLink }}">Mas información</a>
+				</p>
+			{{/ if }}
 		</div>
 	</div>
 </template>
