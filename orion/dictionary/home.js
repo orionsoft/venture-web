@@ -14,9 +14,19 @@ orion.dictionary.addDefinition('bannerHeight', 'home', {
     label: 'Banner Height (number)'
 });
 
+orion.dictionary.addDefinition('homeInvestText', 'home', {
+    type: String,
+    label: "Invest Text"
+});
+
 orion.dictionary.addDefinition('homeInvestLink', 'home', {
     type: String,
     label: "Invest Link"
+});
+
+orion.dictionary.addDefinition('homeRaiseCapitalText', 'home', {
+    type: String,
+    label: "Raise Capital Text"
 });
 
 orion.dictionary.addDefinition('homeRaiseCapitalLink', 'home', {
