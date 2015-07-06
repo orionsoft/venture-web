@@ -46,6 +46,11 @@ orion.addEntity('enterprises', {
         label: "More Info Link",
         optional: true
     },
+    position: {
+      type: Number,
+      label: 'Posisión',
+      optional: true
+    }
 }, {
     icon: 'suitcase',
     sidebarName: 'Enterprises',
