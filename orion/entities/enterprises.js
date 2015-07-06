@@ -48,7 +48,7 @@ orion.addEntity('enterprises', {
     },
     position: {
       type: Number,
-      label: 'Posisión',
+      label: 'Posición',
       optional: true
     }
 }, {
@@ -60,5 +60,6 @@ orion.addEntity('enterprises', {
         { data:'title', title: 'Title' },
         { data:'pledged', title: 'Pledged' },
         { data:'funded', title: 'Funded' },
+        { data:'position', title: 'Posición' },
     ]
 });
