@@ -22,9 +22,9 @@ orionjs:bootstrap
 orionjs:filesystem
 orionjs:s3
 orionjs:file-attribute
-orionjs:froala-editor
+orionjs:froala
 orionjs:pages
-orionjs:core@1.0.0
+orionjs:core
 fortawesome:fontawesome
 twbs:bootstrap
 less
