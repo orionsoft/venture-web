@@ -4,7 +4,7 @@ Template.homeEnterprises.onCreated(function() {
 
 Template.homeEnterprises.helpers({
 	enterprises: function () {
-		var enterprises = orion.entities.enterprises.collection.find({}, { sort: { position: 1 } }).fetch();
+		var enterprises = Enterprises.find({}, { sort: { position: 1 } }).fetch();
 		return _.filter(enterprises, function(value, key, list){
 			if (!value.dueDate) {
 				return true;

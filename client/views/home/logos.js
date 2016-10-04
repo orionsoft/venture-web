@@ -1,9 +1,9 @@
 Template.homeLogos.onCreated(function() {
-	this.subscribe('entity', 'logos');
+	this.subscribe('logos');
 });
 
 Template.homeLogos.helpers({
 	logos: function () {
-		return orion.entities.logos.collection.find();
+		return Logos.find();
 	}
 });

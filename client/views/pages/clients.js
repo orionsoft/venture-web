@@ -4,6 +4,6 @@ Template.clients.onRendered(function() {
 
 Template.clients.helpers({
   clients: function() {
-    return orion.entities.clients.collection.find({}, { sort: { index: 1 } });
+    return Clients.find({}, { sort: { index: 1 } })
   }
 });

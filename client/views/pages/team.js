@@ -4,6 +4,6 @@ Template.team.onRendered(function() {
 
 Template.team.helpers({
   persons: function() {
-    return orion.entities.team.collection.find({}, { sort: { index: 1 } });
+    return Teams.collection.find({}, { sort: { index: 1 } })
   }
 });

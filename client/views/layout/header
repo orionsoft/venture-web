@@ -1,0 +1,67 @@
+<template name="header">
+	<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#venture-navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{ pathFor 'home' }}">
+          <img alt="Venture Capital" src="{{ dict 'logo.url' }}">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="venture-navbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Nosotros <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="{{ pathFor 'team' }}">Equipo</a></li>
+              <li><a href="{{ pathFor 'clients' }}">Clientes</a></li>
+              {{# each getPages "1" }}
+                {{> headerPages }}
+              {{/ each }}
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Ayuda <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              {{# each getPages "2" }}
+                {{> headerPages }}
+              {{/ each }}
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Emprende <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="{{ dict 'homeRaiseCapitalLink' }}">{{ dict 'homeRaiseCapitalText' }}</a></li>
+              <li class="divider"></li>
+              {{# each getPages "3" }}
+                {{> headerPages }}
+              {{/ each }}
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Invierte <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="{{ dict 'homeInvestLink' }}">{{ dict 'homeInvestText' }}</a></li>
+              <li class="divider"></li>
+              {{# each getPages "4" }}
+                {{> headerPages }}
+              {{/ each }}
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div>
+  </nav>
+</template>
+
+<template name="headerPages">
+  <li>
+    <a href="{{ path }}">
+      {{ title }}
+    </a>
+  </li>
+</template>
