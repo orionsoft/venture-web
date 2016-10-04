@@ -23,7 +23,13 @@ Router.route('/', {
 	name: 'home',
 	layoutTemplate: 'layout',
   onAfterAction: afterAction
-});
+})
+
+Router.route('/newhome', {
+	name: 'newhome',
+	layoutTemplate: 'newlayout',
+  onAfterAction: afterAction
+})
 
 Router.route('/equipo', {
   name: 'team',

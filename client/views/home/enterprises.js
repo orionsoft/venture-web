@@ -1,10 +1,12 @@
-Template.homeEnterprises.onCreated(function() {
-	this.subscribe('entity', 'enterprises');
-});
+import { Template } from 'meteor/templating'
+
+Template.homeEnterprises.onCreated(function () {
+  this.subscribe('enterprises')
+})
 
 Template.homeEnterprises.helpers({
-	enterprises: function () {
-		var enterprises = Enterprises.find({}, { sort: { position: 1 } }).fetch();
+  enterprises: function () {
+		var enterprises = Enterprises.find({}, { sort: { position: 1 } }).fetch()
 		return _.filter(enterprises, function(value, key, list){
 			if (!value.dueDate) {
 				return true;
