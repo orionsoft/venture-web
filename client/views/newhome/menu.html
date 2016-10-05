@@ -1,7 +1,20 @@
 <template name="menu">
-  <div class="row">
-    <div class="col-md-12">
-      Menu
+  <div class="menu grey lighten-4 animated {{animation}}" style="z-index: 1000;position:absolute; height:100%; width:100%;  visibility: {{display}};">
+    <div class="container">
+      <div class="row center-xs">
+        <div class="col-md-12">
+          <ul>
+            <li><div class="close-button js-close-more-menu -open -animate">X</div></li>
+            <li><a href="">Sobre Nostrosos</a></li>
+            <li><a href="">Servicio</a></li>
+            <li><a href="">Contacto</a></li>
+          </ul>
+          <ul>
+            <li><a href="">Login ></a></li>
+            <li><a href="">Registrarse ></a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>  
+  </div>
 </template>
