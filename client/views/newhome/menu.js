@@ -9,3 +9,8 @@ Template.menu.helpers({
     return Session.get('animation')
   }
 })
+Template.menu.events({
+  'click .closeBtn' (event) {
+    Session.set('animation', 'slideOutUp')
+  }
+})

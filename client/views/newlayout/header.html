@@ -2,13 +2,30 @@
 	<div class="navbar-fixed">
 		<nav>
 	  	  <div class="nav-wrapper">
-	    	  <a href="#" class="brand-logo">
-						<img src="/images/VENTURE.png" style="height:80px; width:250px">
-					</a>
-	      	<ul id="nav-mobile" class="right hide-on-med-and-down">
-	        	<li>
-							<a class="btn-floating btn-large waves-effect waves-light red menuBtn">
-								<svg class="icon icon-menu" style="font-size: 24px;"><use xlink:href="#icon-menu"></use></svg>
+					<div style="background-image:url('images/VENTURE.png');width:225px;height:64px;margin-left:20px;background-size:contain;background-repeat: no-repeat;position:absolute"></div>
+					<ul id="nav-mobile sections" class="right hide-on-med-and-down">
+						<li>
+							<div class='dropdown-button btn btn-flat special-hover'
+								data-beloworigin="true"
+								data-hover='true'
+								data-activates='dropdown1'>Capital de Riesgo</div>
+							<!-- Dropdown Structure -->
+							<ul id='dropdown1' class='dropdown-content' style="background-color:rgba(0,0,0,0.5)">
+								<li><a href="#!" class="special-hover" style="color:white;font-size:12px">Raicap, fondo de Inversión</a></li>
+								<li><a href="#!" class="special-hover" style="color:white;font-size:12px">Red Ángel</a></li>
+								<li><a href="#!" class="special-hover" style="color:white;font-size:12px">Companie Builder</a></li>
+							</ul>
+
+
+							<a class="waves-effect waves-light btn-flat special-hover">Intermediación</a>
+
+							<a class="waves-effect waves-light btn-flat special-hover">Inmobiliario</a>
+
+
+						</li>
+						<li>
+							<a class="btn-floating btn-large waves-effect waves-light red menuBtn" style="width:40px;height:40px;">
+								{{> iconmenu}}
 							</a>
 						</li>
 	      	</ul>

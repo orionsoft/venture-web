@@ -1,20 +1,20 @@
 <template name="menu">
   <div class="menu grey lighten-4 animated {{animation}}" style="z-index: 1000;position:absolute; height:100%; width:100%;  visibility: {{display}};">
-    <div class="container">
+
       <div class="row center-xs">
         <div class="col-md-12">
-          <ul>
-            <li><div class="close-button js-close-more-menu -open -animate">X</div></li>
+          <div class="close-button js-close-more-menu -open -animate closeBtn" style="margin-top:40px">{{> iconcross}}</div>
+          <ul class="main_list" style="margin-top:60px;position: relative;">
             <li><a href="">Sobre Nostrosos</a></li>
-            <li><a href="">Servicio</a></li>
+            <li><a href="" >Servicio</a></li>
             <li><a href="">Contacto</a></li>
           </ul>
-          <ul>
+          <ul class="second_list" style="margin-top:60px">
             <li><a href="">Login ></a></li>
             <li><a href="">Registrarse ></a></li>
           </ul>
         </div>
       </div>
-    </div>
+
   </div>
 </template>

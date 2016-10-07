@@ -1,0 +1,40 @@
+.main_list a {
+  font-size: 2.1875em;
+  text-decoration: none;
+  color: #2d292a;
+  transition: color .2s linear;
+}
+.main_list a:hover{
+  color: #D7222F;
+}
+.main_list li {
+  margin-top: 20px
+}
+.second_list a {
+  color: #CBC8C7;
+  font-size: 20px;
+  line-height: 32px;
+}
+.close-button {
+  transition: border-color .3s ease-out
+}
+.close-button:hover {
+    border: 3px solid #D7222F;
+}
+
+.main_list li a {
+  position: relative;
+}
+
+a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: 2px solid #D7222F;
+  transition: 0.4s;
+}
+a:hover:after {
+  width: 100%;
+}
