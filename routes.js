@@ -1,4 +1,6 @@
-var afterAction = function() {
+import Meteor from 'meteor/meteor'
+
+var afterAction = function () {
   if (!Meteor.isClient) {
     return;
   }
@@ -16,8 +18,8 @@ var afterAction = function() {
       'description': orion.dictionary.get('seoDescription'),
       'image': orion.dictionary.get('seoImage.url')
     }
-  });
-};
+  })
+}
 
 Router.route('/', {
 	name: 'home',
@@ -31,17 +33,17 @@ Router.route('/newhome', {
   onAfterAction: afterAction
 })
 
-Router.route('/equipo', {
+Router.route('/team', {
   name: 'team',
-  layoutTemplate: 'layout',
+  layoutTemplate: 'newlayout',
   onAfterAction: afterAction
-});
+})
 
 Router.route('/clientes', {
   name: 'clients',
   layoutTemplate: 'layout',
   onAfterAction: afterAction
-});
+})
 
 Router.route('/api/enterprises', function() {
   var enterprises = orion.entities.enterprises.collection.find().fetch();
