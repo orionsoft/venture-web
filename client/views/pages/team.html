@@ -1,26 +1,15 @@
 <template name="team">
-  <br>
-  <div class="container pagesSimple">
-    <h1 class="page-title">Equipo</h1>
-    <hr>
-
-    <div class="content team">
-      <div class="row">
-        {{# each persons }}
-          <div class="col-sm-6 col-md-4 team-item">
-            <div class="">
-              <img src="{{ image.url }}" class="img-circle">
+  <div class="home">
+    <div class="row" style="margin-top:100px">
+      <div class="container">
+        <div class="col-md-12 team_img">
+          <div class="row center-xs middle-xs" style="height:100%">
+            <div class="col-md-8" >
+              <h1>Nuestro Equipo</h1>
             </div>
-            <h3>{{ name }}</h3>
-            <h4>{{ role }}</h4>
-            <p>
-              <a href="mailto:{{ email }}">{{ email }}</a>
-            </p>
           </div>
-        {{/ each }}
+        </div>
       </div>
-      
     </div>
-    <br><br>
   </div>
 </template>
