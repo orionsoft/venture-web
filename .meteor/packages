@@ -23,13 +23,13 @@ orionjs:materialize
 orionjs:filesystem
 orionjs:s3
 orionjs:file-attribute
-orionjs:froala
 orionjs:pages
 orionjs:core
-
 # Routing
-iron:router
-useraccounts:iron-routing
+kadira:flow-router
+useraccounts:flow-routing
+
+kadira:blaze-layout
 
 # Styles
 materialize:materialize
@@ -39,6 +39,6 @@ less
 #Misc
 momentjs:moment
 spiderable
-manuelschoebel:ms-seo
+tomwasd:flow-router-seo
 npm-bcrypt@0.8.7
 session
