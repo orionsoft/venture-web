@@ -25,6 +25,8 @@ orionjs:s3
 orionjs:file-attribute
 orionjs:pages
 orionjs:core
+panter:orion-froala2
+
 # Routing
 kadira:flow-router
 useraccounts:flow-routing
