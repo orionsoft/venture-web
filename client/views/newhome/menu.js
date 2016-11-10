@@ -12,5 +12,8 @@ Template.menu.helpers({
 Template.menu.events({
   'click .closeBtn' (event) {
     Session.set('animation', 'slideOutUp')
+  },
+  'click .menu a': function (event) {
+    Session.set('animation', 'slideOutUp')
   }
 })
