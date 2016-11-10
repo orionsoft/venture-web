@@ -26,7 +26,11 @@
   position: relative;
 }
 
-a:after {
+.dropdown-content li {
+  position: relative;
+}
+
+.red-outline:after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -35,6 +39,6 @@ a:after {
   border-bottom: 2px solid #D7222F;
   transition: 0.4s;
 }
-a:hover:after {
+.red-outline:hover:after {
   width: 100%;
 }
