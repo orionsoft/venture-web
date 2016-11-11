@@ -71,7 +71,7 @@ mongo@1.1.12
 mongo-id@1.0.5
 nicolaslopezj:options@1.0.1
 nicolaslopezj:reactive-templates@1.2.1
-nicolaslopezj:roles@1.5.3
+nicolaslopezj:roles@2.6.0
 nicolaslopezj:router-layer@0.0.11
 nicolaslopezj:tabular-materialize@1.2.1
 nimble:restivus@0.8.5
@@ -88,6 +88,7 @@ orionjs:core@1.8.0
 orionjs:dictionary@1.8.0
 orionjs:file-attribute@1.8.0
 orionjs:filesystem@1.8.0
+orionjs:image-attribute@1.8.0
 orionjs:lang-en@1.8.0
 orionjs:materialize@1.8.0
 orionjs:pages@1.8.0
