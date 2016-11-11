@@ -40,4 +40,3 @@ Members.attachSchema(new SimpleSchema({
 }))
 
 export default Members
-
