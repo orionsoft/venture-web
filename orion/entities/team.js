@@ -28,8 +28,18 @@ Teams.attachSchema(new SimpleSchema({
     type: String,
     label: 'email',
     optional: true
+  },  
+  linkedin: {
+    type: String,
+    label: 'linkedin',
+    optional: true
   },
   image: orion.attribute('file', {
       label: 'Image'
-  })
+  }),
+  'manager':{
+    type:Boolean,
+    label:'Director',
+    optional:true
+  }
 }))

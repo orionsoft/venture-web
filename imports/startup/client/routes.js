@@ -14,3 +14,10 @@ FlowRouter.route('/contact', {
     BlazeLayout.render('newlayout', {content: 'contact'})
   }
 })
+
+FlowRouter.route('/nosotros', {
+  name: 'nosotros',
+  action: function () {
+    BlazeLayout.render('newlayout', {content: 'nosotros'})
+  }
+})
