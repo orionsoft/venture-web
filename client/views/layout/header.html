@@ -1,17 +1,44 @@
-<template name="header">
-	<nav>
-	    <div class="nav-wrapper">
-	      <a href="#" class="brand-logo">Logo</a>
-	      <ul id="nav-mobile" class="right hide-on-med-and-down">
-	        <li><a href="sass.html">Sass</a></li>
-	        <li><a href="badges.html">Components</a></li>
-	        <li><a href="collapsible.html">JavaScript</a></li>
-	      </ul>
-	    </div>
-	  </nav>
+<template name="newheader">
+	<div class="navbar-fixed">
+		<nav>
+	  	  <div class="nav-wrapper">
+	  	  	<a href="/">
+						<div style="background-image: url('images/VENTURE.png'); width:225px; height:64px; margin-left:20px; background-size:contain; background-repeat: no-repeat; position: absolute"></div>
+	  	  	</a>
+					<ul id="nav-mobile sections" class="right hide-on-med-and-down">
+						<li>
+							<div class='dropdown-button btn btn-flat special-hover red-outline'
+								data-beloworigin="true"
+								data-hover='true'
+								data-activates='dropdown1'
+								style='position: relative'>Capital de Riesgo</div>
+							<!-- Dropdown Structure -->
+							<ul id='dropdown1' class='dropdown-content' style="background-color: rgba(0,0,0,0.5)">
+								<li><a href="" class="special-hover red-outline" style="color: white; font-size: 12px">Raicap, fondo de Inversión</a></li>
+								<li><a href="" class="special-hover red-outline" style="color: white; font-size: 12px">Red Ángel</a></li>
+								<li><a href="" class="special-hover red-outline" style="color: white; font-size: 12px">Companie Builder</a></li>
+							</ul>
+
+
+							<a class="waves-effect waves-light btn-flat special-hover red-outline">Intermediación</a>
+
+							<a class="waves-effect waves-light btn-flat special-hover red-outline">Inmobiliario</a>
+
+
+						</li>
+						<li>
+							<a class="btn-floating btn-large waves-effect waves-light red menuBtn" style="width:40px;height:40px;">
+								{{> iconmenu}}
+							</a>
+						</li>
+	      	</ul>
+	    	</div>
+	  	</nav>
+	  	{{> menu}}
+	</div>
 </template>
 
-<template name="headerPages">
+<template name="newHeaderPages">
   <li>
     <a href="{{ path }}">
       {{ title }}
