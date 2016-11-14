@@ -1,0 +1,55 @@
+<template name="nosotros">
+  <div class="parallax-container" style="height:200px;">
+    <div class="parallax"><img src="https://d33wubrfki0l68.cloudfront.net/img/97a76c037453e9facc0b0dd856c6755264a2a1bb/grid-bg-1.jpg"></div>
+  </div>
+  <div style='width: 80%; margin: 0 auto;'>
+    <h1>Sobre nosotros</h1>
+      <p>
+Somos un equipo de emprendedores seriales, con más de ocho años de experiencia en la industria financiera, que
+busca educar y conectar inversionistas con buenas oportunidades de inversión de forma transparente, segura y
+exitosa.</p>
+    <h2 class="page-title">Directores</h2>
+    <hr/>
+
+      <div class="row ">
+        {{# each managers }}
+         <div class="card small team-card hoverable  ">
+          <a href="{{linkedin}}" target="_blank">
+          <div class="card-content">
+            <img style="width:200px; max-height: 200px;"  src="{{ image.url }}">
+            <span class="card-title activator grey-text text-darken-4" style="display:block">{{ name }}</span>
+
+            <small style="display:inline-block">{{ role }}</small> 
+            <img style="max-width: 20px;float:right;" src="/images/icon-linkedin.png"/>
+          </div>
+          </a>
+         </div>
+
+        {{/ each }}
+      </div>
+      
+    <br/><br/>
+   
+
+  <h2 class="page-title">Equipo</h2>
+    <hr/>
+
+      <div class="row">
+        {{# each team }}
+         <div class="card small team-card hoverable" >
+         <a href="{{linkedin}}" target="_blank">
+          <div class="card-content ">
+            <img style="width:200px" src="{{ image.url }}">
+            <span class="card-title  grey-text text-darken-4" style="display:block">{{ name }}</span>
+            <small style="display:inline-block">{{ role }}</small> 
+            <img style="max-width: 20px;float:right;" src="/images/icon-linkedin.png"/>
+          </div>
+         </a>
+         </div>
+
+        {{/ each }}
+      </div>
+    <br/><br/>
+   
+  </div>
+</template>
