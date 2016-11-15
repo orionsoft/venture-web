@@ -21,3 +21,9 @@ FlowRouter.route('/nosotros', {
     BlazeLayout.render('newlayout', {content: 'nosotros'})
   }
 })
+FlowRouter.route('/capital-de-riesgo/raicap', {
+  name: 'nosotros',
+  action: function () {
+    BlazeLayout.render('newlayout', {content: 'raicap'})
+  }
+})
