@@ -22,13 +22,13 @@ FlowRouter.route('/nosotros', {
   }
 })
 FlowRouter.route('/capital-de-riesgo/raicap', {
-  name: 'nosotros',
+  name: 'raicap',
   action: function () {
     BlazeLayout.render('newlayout', {content: 'raicap'})
   }
 })
 FlowRouter.route('/capital-de-riesgo/red-angel', {
-  name: 'nosotros',
+  name: 'angel',
   action: function () {
     BlazeLayout.render('newlayout', {content: 'angel'})
   }
