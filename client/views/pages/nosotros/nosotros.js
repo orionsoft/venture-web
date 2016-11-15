@@ -14,6 +14,6 @@ Template.nosotros.helpers({
     return Teams.find({manager:true}, { sort: { index: 1 } }).fetch()
   },
   team: function() {
-    return Teams.find({manager:false}, { sort: { index: 1 } }).fetch()
+    return Teams.find({$or: [{manager:false},{manager:null}] }, { sort: { index: 1 } }).fetch()
   }
 });
