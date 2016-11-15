@@ -27,3 +27,9 @@ FlowRouter.route('/capital-de-riesgo/raicap', {
     BlazeLayout.render('newlayout', {content: 'raicap'})
   }
 })
+FlowRouter.route('/capital-de-riesgo/red-angel', {
+  name: 'nosotros',
+  action: function () {
+    BlazeLayout.render('newlayout', {content: 'angel'})
+  }
+})
