@@ -53,12 +53,13 @@ less@2.7.5
 livedata@1.0.18
 localstorage@1.0.11
 logging@1.1.15
-matb33:collection-hooks@0.7.15
+matb33:collection-hooks@0.8.1
 materialize:materialize@0.97.7
 meteor@1.2.17
 meteor-base@1.0.4
 meteor-platform@1.2.1
 meteorhacks:inject-initial@1.0.4
+meteorhacks:picker@1.0.3
 minifier-css@1.2.14
 minifier-js@1.2.14
 minimongo@1.0.17
@@ -70,6 +71,7 @@ momentjs:moment@2.15.1
 mongo@1.1.12
 mongo-id@1.0.5
 nicolaslopezj:options@1.0.1
+nicolaslopezj:orion-exporter@1.4.0
 nicolaslopezj:reactive-templates@1.2.1
 nicolaslopezj:roles@2.6.0
 nicolaslopezj:router-layer@0.0.11

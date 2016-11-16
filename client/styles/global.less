@@ -14,8 +14,8 @@ body {
 	text-transform: none;
 }
 
-.dropdown-content > li > a {
-	font-size: 14px !important;
+ul.dropdown-content {
+  width: 200px !important;
 }
 
 
@@ -43,14 +43,14 @@ body {
   stroke: currentColor;
   fill: currentColor;
 }
-a.menu-transparente,ul.menu-transparente, .menu-transparente > li > a{
+/*a.menu-transparente,ul.menu-transparente, .menu-transparente > li > a{
   background: transparent !important;
-}
-.menu-transparente > li:hover{
-  background-color: rgba(255,255, 255, .5) !important;
-}
+}*/
+
 
 .menu-transparente >li>a{
+  background-color: white !important;
+  text-align: center;
   font-size: 18px !important
 }
 .menu-transparente >li>a:hover{
@@ -62,7 +62,6 @@ a.menu-transparente,ul.menu-transparente, .menu-transparente > li > a{
 
 
 a.menu-transparente:hover, div.menu-transparente:hover{
-  background-color: rgba(255, 255, 255, .5) !important;
   box-shadow: none;
   font-weight: bold;
   color:red !important; 
