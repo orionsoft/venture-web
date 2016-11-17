@@ -10,6 +10,12 @@ Template.contact.onRendered(function () {
   $('select').material_select()
 })
 
+Template.contact.helpers({
+  investorSelected: () => {
+    return FlowRouter.current().queryParams.motivo === 'inversionistas' ? 'selected' : ''
+  }
+})
+
 Template.contact.events({
   'submit form': (e) => {
     e.preventDefault()
