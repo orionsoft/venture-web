@@ -8,19 +8,6 @@ FlowRouter.route('/', {
   }
 })
 
-FlowRouter.route('/contact', {
-  name: 'contact',
-  action: function () {
-    BlazeLayout.render('newlayout', {content: 'contact'})
-  }
-})
-
-FlowRouter.route('/nosotros', {
-  name: 'nosotros',
-  action: function () {
-    BlazeLayout.render('newlayout', {content: 'nosotros'})
-  }
-})
 FlowRouter.route('/capital-de-riesgo/raicap', {
   name: 'raicap',
   action: function () {
@@ -31,5 +18,26 @@ FlowRouter.route('/capital-de-riesgo/red-angel', {
   name: 'angel',
   action: function () {
     BlazeLayout.render('newlayout', {content: 'angel'})
+  }
+})
+
+FlowRouter.route('/intermediacion', {
+  name: 'intermediacion',
+  action: function () {
+    BlazeLayout.render('newlayout', {content: 'intermediacion'})
+  }
+})
+
+FlowRouter.route('/nosotros', {
+  name: 'nosotros',
+  action: function () {
+    BlazeLayout.render('newlayout', {content: 'nosotros'})
+  }
+})
+
+FlowRouter.route('/contact', {
+  name: 'contact',
+  action: function () {
+    BlazeLayout.render('newlayout', {content: 'contact'})
   }
 })
