@@ -9,7 +9,8 @@ Template.angel.onRendered(function () {
   })
 })
 Template.angel.events({
-  'click #inversionista': (event) => {
-    FlowRouter.go('contact', null, {motivo: 'inversionista'})
+  'click #inversionistas': (event) => {
+    console.log('click')
+    FlowRouter.go('contact', null, {motivo: 'inversionistas'})
   }
 })

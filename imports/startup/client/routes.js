@@ -35,6 +35,13 @@ FlowRouter.route('/nosotros', {
   }
 })
 
+FlowRouter.route('/saeco', {
+  name: 'saeco',
+  action: function () {
+    BlazeLayout.render('newlayout', {content: 'saeco'})
+  }
+})
+
 FlowRouter.route('/contact', {
   name: 'contact',
   action: function () {
