@@ -19,6 +19,8 @@ ul.dropdown-content {
 }
 
 
+
+
 .logo {
 	margin-top: 30px;
 }
@@ -88,13 +90,16 @@ strong{
   font-weight: bold !important;
 }
 .main-container > ul > li{
-  list-style-type: initial !important;
   margin-left: 20px;
 }
-.staff-container{
-  max-width: 900px;
-  margin: 0 auto !important;
+
+
+.main-container > ul >li:before{
+    content: '✔';   
+    margin-left: -1em;
+    margin-right: .100em;
 }
+
 
 .input-field input[type=text]:focus + label + ul{
   color: red !important;
@@ -137,7 +142,11 @@ strong{
 
 
 
-.materialize-textarea textarea:focus {
+.materialize-textarea:focus {
+  border-bottom: 1px solid red;
+  box-shadow: 0 1px 0 0 red;
+}
+.materialize-textarea.valid {
   border-bottom: 1px solid red;
   box-shadow: 0 1px 0 0 red;
 }
