@@ -101,55 +101,39 @@ strong{
 }
 
 
-.input-field input[type=text]:focus + label + ul{
+.input-field input:focus + label {
   color: red !important;
 }
-.input-field input[type=text]:focus {
-  border-bottom: 1px solid red;
-  box-shadow: 0 1px 0 0 red;
+.input-field input:focus {
+  border-bottom: 1px solid red !important;
+  box-shadow: 0 1px 0 0 red !important;
 }
 
-.input-field input[type=text].valid {
+.input-field input.valid {
  border-bottom: 1px solid red;
  box-shadow: 0 1px 0 0 red;
 }
-.input-field input[type=email]:focus + label  {
-  color: red;
-}
-.input-field input[type=email]:focus {
-  border-bottom: 1px solid red;
-  box-shadow: 0 1px 0 0 red;
-}
-
-.input-field input[type=select]:focus + label {
-  color: red;
-}
-.input-field input[type=email]:focus {
-  border-bottom: 1px solid red;
-  box-shadow: 0 1px 0 0 red;
-}
-
-.input-field input[type=email].valid {
+.input-field input:focus.valid {
  border-bottom: 1px solid red;
  box-shadow: 0 1px 0 0 red;
 }
-.input-field input[type=email].invalid {
+.input-field input.invalid {
  border-bottom: 1px solid #000;
  box-shadow: 0 1px 0 0 #000;
 }
 
 
-
-
-
-.materialize-textarea:focus {
-  border-bottom: 1px solid red;
-  box-shadow: 0 1px 0 0 red;
-}
-.materialize-textarea.valid {
-  border-bottom: 1px solid red;
-  box-shadow: 0 1px 0 0 red;
-}
 .input-field textarea:focus + label {
-  color: red;
+  color: red !important;
+}
+.input-field textarea:focus {
+  border-bottom: 1px solid red !important;
+  box-shadow: 0 1px 0 0 red !important;
+}
+.input-field textarea.valid {
+  border-bottom: 1px solid red !important;
+  box-shadow: 0 1px 0 0 red !important;
+}
+.dropdown-content li > span{
+  color: red !important
 }
