@@ -35,10 +35,10 @@ FlowRouter.route('/nosotros', {
   }
 })
 
-FlowRouter.route('/saeco', {
-  name: 'saeco',
+FlowRouter.route('/prensa', {
+  name: 'prensa',
   action: function () {
-    BlazeLayout.render('newlayout', {content: 'saeco'})
+    BlazeLayout.render('newlayout', {content: 'prensa'})
   }
 })
 
