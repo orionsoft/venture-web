@@ -19,6 +19,8 @@ Template.contact.helpers({
 Template.contact.events({
   'submit form': (e) => {
     e.preventDefault()
+    var captchaData = grecaptcha.getResponse();
+
     var message = {
       first_name: $('#first_name').val(),
       email: $('#email').val(),
@@ -38,16 +40,27 @@ Template.contact.events({
         return false
       }
     })
-
     if (empty) {
       Materialize.toast('Hay campos del formulario sin rellenar.', 4000)
       return false
     }
 
-    console.log(message)
-    Meteor.call('contact.sendEmail', message, () => {
-      e.target.reset()
-      Materialize.toast('Mensaje recibido, gracias por contactarnos.', 4000)
-    })
+    var captchaData = grecaptcha.getResponse() 
+    console.log(message, captchaData)
+    if (captchaData) {
+      Meteor.call('contact.sendEmail', message, captchaData, (error) => {
+        if (error) {
+          console.log('There was an error: ' + error.reason)
+          Materialize.toast('Mensaje no enviado, '+error.reason, 4000)
+        } else {
+          console.log('Success!')
+          grecaptcha.reset()         
+          Materialize.toast('Mensaje recibido, gracias por contactarnos.', 4000)
+          e.target.reset()
+        }
+      })
+    } else {
+      Materialize.toast('Debe comprobar el recaptcha', 4000)
+    }
   }
 })
