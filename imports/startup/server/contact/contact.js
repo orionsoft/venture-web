@@ -14,10 +14,10 @@ Meteor.methods({
     } else {
       console.log('reCAPTCHA verification passed!')
       Email.send({
-        to: data.email,
+        to: 'info@venturecapital.cl',
         from: 'info@venturecapital.cl',
         subject: `Email de contacto, motivo: ${data.motivo}`,
-        text: `Nombre: ${data.first_name}\nMotivo:${data.motivo}\nEmail:${data.email}\nMensaje:\n${data.message}`
+        text: `Nombre: ${data.first_name}\nMotivo:${data.motivo}\nEmail: ${data.email}\nMensaje:\n${data.message}`
       })
     }
     return true
