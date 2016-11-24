@@ -6,6 +6,7 @@ Template.nosotros.onRendered(function () {
   $('.parallax').parallax()
   $('select').material_select()
   this.subscribe('Teams')
+  document.title = 'Venture Capital - Nosotros'
 })
 
 

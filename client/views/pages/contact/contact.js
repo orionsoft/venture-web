@@ -8,6 +8,7 @@ import _ from 'underscore'
 Template.contact.onRendered(function () {
   $('.parallax').parallax()
   $('select').material_select()
+  document.title = 'Venture Capital - Contacto'
 })
 
 Template.contact.helpers({

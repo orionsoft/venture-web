@@ -4,6 +4,7 @@ import { $ } from 'meteor/jquery'
 Template.angel.onRendered(function () {
   $('.parallax').parallax()
   $('select').material_select()
+  document.title = 'Venture Capital - Red Ángel'
   $('#inversionista').on('click', '.main-container', function (argument) {
     console.log('se clickeo')
   })
