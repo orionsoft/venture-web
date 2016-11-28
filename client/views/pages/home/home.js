@@ -1,3 +1,3 @@
 Template.newhome.onRendered(function () {
-  document.title = 'Venture Capital'
+  document.title = 'Venture Capital - Investment Group'
 })
