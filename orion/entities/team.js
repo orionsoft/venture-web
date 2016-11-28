@@ -1,7 +1,7 @@
 Teams = new orion.collection('team', {
   icon: 'suitcase',
   sidebarName: 'Team',
-  pluralName: 'Team Persons',
+  pluralName: 'Team People',
   singularName: 'Team Person',
   tabular: {
     columns: [
