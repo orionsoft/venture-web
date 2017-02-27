@@ -48,3 +48,17 @@ FlowRouter.route('/contact', {
     BlazeLayout.render('newlayout', {content: 'contact'})
   }
 })
+
+FlowRouter.route('/inmobiliario', {
+  name: 'inmobiliario',
+  action: function () {
+    BlazeLayout.render('newlayout', {content: 'inmobiliario'})
+  }
+})
+
+FlowRouter.route('/inmobiliario/formulario', {
+  name: 'inmobiliario',
+  action: function () {
+    BlazeLayout.render('newlayout', {content: 'inmobiliario'})
+  }
+})

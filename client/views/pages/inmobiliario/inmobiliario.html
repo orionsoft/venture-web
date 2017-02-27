@@ -1,0 +1,92 @@
+<template name="inmobiliario">
+  <div class="parallax-container row valign-wrapper"  style="height:400px;">
+    <h1  class="valign" style="margin:auto;">Contacto Inmobiliario</h1>
+    <div class="parallax"><img src="https://d33wubrfki0l68.cloudfront.net/img/97a76c037453e9facc0b0dd856c6755264a2a1bb/grid-bg-1.jpg">
+    </div>
+  </div>
+  <div style='width: 80%; margin: 0 auto;'>
+    <!-- <h1>Contacto</h1> -->
+    <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12 m12 l4">
+              <input id="names" type="text" class="validate">
+              <label for="names">Nombre</label>
+            </div>
+            <div class="input-field col s12 m12 l4">
+              <input id="lastName" type="text" class="validate">
+              <label for="lastName">Apellidos</label>
+            </div>
+            <div class="input-field col s12 m12 l4">
+              <input id="email" type="email" class="validate">
+              <label for="email">Email</label>
+            </div>
+            <div class="input-field col s12 m12 l4">
+              <input id="phone" type="text" class="validate">
+              <label for="phone">Telefono</label>
+            </div>
+            <div class="input-field col s12 m12 l4">
+              <select id="monthlySalary">
+                <option value="1">Menor o igual a $100.000</option>
+                <option value="2">$100.000 - $150.000</option>
+                <option value="3">$150.001 - $210.000</option>
+                <option value="4">$210.001 - $300.000</option>
+                <option value="5">$300.001 - $426.000</option>
+                <option value="6">$426.001 - $550.000</option>
+                <option value="7">$550.001 - $625.000</option>
+                <option value="8">$625.001 - $852.000</option>
+                <option value="9">$852.001 - $1.025.000</option>
+                <option value="10">$1.052.001 - $1.252.000</option>
+                <option value="11">$1.252.001 - $.1500.000</option>
+                <option value="12">$1.500.00 o más</option>
+              </select>
+              <label for="monthlySalary">Renta Mensual Líquida</label>
+            </div>
+            <div class="input-field col s12 m12 l4">
+              <select id="monthlySavings">
+                <option value="1">Menor o igual a $100.000</option>
+                <option value="2">$100.000 - $150.000</option>
+                <option value="3">$150.001 - $210.000</option>
+                <option value="4">$210.001 - $300.000</option>
+                <option value="5">$300.001 - $426.000</option>
+                <option value="6">$426.001 - $550.000</option>
+                <option value="7">$550.001 - $625.000</option>
+                <option value="8">$625.001 - $852.000</option>
+                <option value="9">$852.001 - $1.025.000</option>
+                <option value="10">$1.052.001 - $1.252.000</option>
+                <option value="11">$1.252.001 - $.1500.000</option>
+                <option value="12">$1.500.00 o más</option>
+              </select>
+              <label for="monthlySavings">Capacidad de Ahorro Mensual</label>
+            </div>
+            <div class="input-field col s12 m12 l4">
+              <select id="monthlyPayments">
+                <option value="1">Menor o igual a $100.000</option>
+                <option value="2">$100.000 - $150.000</option>
+                <option value="3">$150.001 - $210.000</option>
+                <option value="4">$210.001 - $300.000</option>
+                <option value="5">$300.001 - $426.000</option>
+                <option value="6">$426.001 - $550.000</option>
+                <option value="7">$550.001 - $625.000</option>
+                <option value="8">$625.001 - $852.000</option>
+                <option value="9">$852.001 - $1.025.000</option>
+                <option value="10">$1.052.001 - $1.252.000</option>
+                <option value="11">$1.252.001 - $.1500.000</option>
+                <option value="12">$1.500.00 o más</option>
+              </select>
+              <label for="monthlyPayments">Disposición Cuotas Mensuales</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field  col s12">
+              <textarea id="message"  class="validate materialize-textarea"></textarea>
+            </div>
+          </div>
+          {{> reCAPTCHA}}
+          <br>
+          <button class="btn waves-effect waves-light red" type="submit" name="action">Enviar
+          </button>
+        </form>
+      </div>
+  </div>
+</template>
