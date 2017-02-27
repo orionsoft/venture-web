@@ -11,6 +11,18 @@ Template.inmobiliario.onRendered(function () {
   document.title = 'Venture Capital - Contacto Inmobiliario'
 })
 
+Template.inmobiliarioBlog.onRendered(function () {
+  $('.parallax').parallax()
+  document.title = 'Venture Capital - Blog Inmobiliario'
+  this.subscribe('Articles')
+})
+
+Template.inmobiliarioBlog.helpers({
+  articles: function () {
+    return Articles.find({}, {sort: {createdAt: -1}}).fetch()
+  }
+})
+
 const SALARY_RANGES = {
   1: 'Menor o igual a $100.000',
   2: '$100.000 - $150.000',

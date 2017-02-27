@@ -12,3 +12,7 @@ Businessman.allow('collections.clients.showUpdate', true) // Allows the user to 
 Businessman.allow('collections.clients.showRemove', true) // Shows the delete button on the update view
 
 Businessman.helper('collections.clients.indexFilter', {}) // Allows the role to se all documents
+
+Businessman.allow('collections.articles.index', true) // Allows the role to see the link in the sidebar
+Businessman.allow('collections.articles.insert', true) // Allows the role to see the link in the sidebar
+Businessman.allow('collections.articles.showCreate', true) // Makes the "create" button visible
