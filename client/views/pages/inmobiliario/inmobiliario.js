@@ -38,6 +38,24 @@ const SALARY_RANGES = {
   12: '$1.500.00 o más'
 }
 
+const HIGHER_RANGES = {
+  1: '$550.001 - $625.000',
+  2: '$625.001 - $852.000',
+  3: '$852.001 - $1.025.000',
+  4: '$1.052.001 - $1.252.000',
+  5: '$1.252.001 - $.1500.000',
+  6: '$1.500.000 - $1.752.000',
+  7: '$1.752.000 - $1.952.000',
+  8: '$1.952.000 - $2.252.000',
+  9: '$2.252.000 - $2.525.000',
+  10: '$2.525.000 - $2.925.000',
+  11: '$2.925.000 - $3.252.000',
+  12: '$3.252.000 - $3.452.000',
+  13: '$3.452.000 - $3.752.000',
+  14: '$3.752.000 - $4.152.000',
+  15: '$4.152.000 o más'
+}
+
 Template.inmobiliario.events({
   'submit form': (e) => {
     e.preventDefault()
@@ -47,7 +65,7 @@ Template.inmobiliario.events({
       lastName: $('#lastName').val(),
       email: $('#email').val(),
       phone: $('#phone').val(),
-      monthlySalary: SALARY_RANGES[+$('#monthlySalary').val()],
+      monthlySalary: HIGHER_RANGES[+$('#monthlySalary').val()],
       monthlySavings: SALARY_RANGES[+$('#monthlySavings').val()],
       monthlyPayments: SALARY_RANGES[+$('#monthlyPayments').val()],
       message: $('#message').val()
@@ -65,7 +83,7 @@ Template.inmobiliario.events({
 
     console.log(message)
     _.each(message, (value, key) => {
-      if (_.isEmpty(value)) {
+      if (_.isEmpty(value) && key !== 'message') {
         Materialize.toast('Hay campos del formulario sin rellenar.', 4000)
         return false
       }
@@ -74,7 +92,7 @@ Template.inmobiliario.events({
     var captchaData = grecaptcha.getResponse()
     console.log(message, captchaData)
     if (captchaData) {
-      Meteor.call('contact.sendEmail', message, captchaData, 'rod@orionsoft.io', (error) => {
+      Meteor.call('contact.sendEmail', message, captchaData, 'david@venturecapital.cl', (error) => {
         if (error) {
           console.log('There was an error: ' + error.reason)
           Materialize.toast('Mensaje no enviado, '+error.reason, 4000)

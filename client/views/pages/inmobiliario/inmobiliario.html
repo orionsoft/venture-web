@@ -13,6 +13,24 @@
   <option value="12">$1.500.00 o más</option>
 </template>
 
+<template name="higherOptions">
+  <option value="1">$550.001 - $625.000</option>
+  <option value="2">$625.001 - $852.000</option>
+  <option value="3">$852.001 - $1.025.000</option>
+  <option value="4">$1.052.001 - $1.252.000</option>
+  <option value="5">$1.252.001 - $.1500.000</option>
+  <option value="6">$1.500.000 - $1.752.000</option>
+  <option value="7">$1.752.000 - $1.952.000</option>
+  <option value="8">$1.952.000 - $2.252.000</option>
+  <option value="9">$2.252.000 - $2.525.000</option>
+  <option value="10">$2.525.000 - $2.925.000</option>
+  <option value="11">$2.925.000 - $3.252.000</option>
+  <option value="12">$3.252.000 - $3.452.000</option>
+  <option value="13">$3.452.000 - $3.752.000</option>
+  <option value="14">$3.752.000 - $4.152.000</option>
+  <option value="15">$4.152.000 o más</option>
+</template>
+
 <template name="inmobiliario">
   <div class="parallax-container row valign-wrapper"  style="height:400px;">
     <h1  class="valign" style="margin:auto;">Contacto Inmobiliario</h1>
@@ -42,7 +60,7 @@
             </div>
             <div class="input-field col s12 m12 l4">
               <select id="monthlySalary">
-                {{> selectOptions}}
+                {{> higherOptions}}
               </select>
               <label for="monthlySalary">Renta Mensual Líquida</label>
             </div>
