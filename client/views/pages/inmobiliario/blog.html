@@ -1,0 +1,26 @@
+<template name="inmobiliarioBlog">
+  <div class="parallax-container row valign-wrapper" style="height:400px;">
+    <h1 class="valign" style="margin:auto;">Blog Inmobiliario</h1>
+    <div class="parallax"><img src="https://d33wubrfki0l68.cloudfront.net/img/97a76c037453e9facc0b0dd856c6755264a2a1bb/grid-bg-1.jpg"></div>
+  </div>
+  <div class='main-container row'>
+    <h1></h1>
+  {{# each articles }}
+    <a target="'_blank" href={{url}}>
+  <div class="card medium col s12 m12 l12 hoverable">
+    <div class="card-image">
+      <img src={{image.url}}>
+    </div>
+    <div class="card-content">
+      <h5>{{title}}</h5>
+    </div>
+    <div class="card-action">
+      <span>{{description}}</span>
+      {{> social_buttons url=url text=title}}
+    </div>
+  </div>
+  </a>
+  {{/each}}
+  </div>
+  {{>footer}}
+</template>

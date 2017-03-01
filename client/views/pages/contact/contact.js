@@ -46,16 +46,16 @@ Template.contact.events({
       return false
     }
 
-    var captchaData = grecaptcha.getResponse() 
+    var captchaData = grecaptcha.getResponse()
     console.log(message, captchaData)
     if (captchaData) {
-      Meteor.call('contact.sendEmail', message, captchaData, (error) => {
+      Meteor.call('contact.sendEmail', message, captchaData, false, (error) => {
         if (error) {
           console.log('There was an error: ' + error.reason)
           Materialize.toast('Mensaje no enviado, '+error.reason, 4000)
         } else {
           console.log('Success!')
-          grecaptcha.reset()         
+          grecaptcha.reset()
           Materialize.toast('Mensaje recibido, gracias por contactarnos.', 4000)
           e.target.reset()
         }
