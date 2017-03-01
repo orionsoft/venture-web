@@ -16,7 +16,7 @@ Meteor.methods({
       let text
       if (!data.motivo) {
         data.motivo = 'Formulario Inmobiliario'
-        text = `Nombres: ${data.names}\nApellidos:${data.lastName}\nEmail: ${data.email}\nRenta Mensual Liquida:${data.monthlySalary}\nCapacidad de Ahorro Mensual: ${data.monthlySavings}\nCapacidad de Cuota Mensual: ${data.monthlyPayments}\nMensaje: ${data.message}`
+        text = `Nombres: ${data.names}\nApellidos:${data.lastName}\nEmail: ${data.email}\nRUT: ${data.rut}\nRenta Mensual Liquida:${data.monthlySalary}\nCapacidad de Ahorro Mensual: ${data.monthlySavings}\nCapacidad de Cuota Mensual: ${data.monthlyPayments}\nMensaje: ${data.message}`
       } else {
         text = `Nombre: ${data.first_name}\nMotivo:${data.motivo}\nEmail: ${data.email}\nMensaje:\n${data.message}`
       }
