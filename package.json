@@ -1,0 +1,26 @@
+{
+  "name": "venture-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mup.js",
+  "dependencies": {
+    "bcrypt": "^0.8.7",
+    "jquery": "^3.1.1",
+    "node-sass": "^3.10.0",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madeby-nicolaslopezj/venture-web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madeby-nicolaslopezj/venture-web/issues"
+  },
+  "homepage": "https://github.com/madeby-nicolaslopezj/venture-web#readme"
+}

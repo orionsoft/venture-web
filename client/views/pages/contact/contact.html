@@ -1,0 +1,43 @@
+<template name="contact">
+  <div class="parallax-container row valign-wrapper"  style="height:400px;">
+    <h1  class="valign" style="margin:auto;">Contacto</h1>
+    <div class="parallax"><img src="https://d33wubrfki0l68.cloudfront.net/img/97a76c037453e9facc0b0dd856c6755264a2a1bb/grid-bg-1.jpg">
+    </div>
+  </div>
+  <div style='width: 80%; margin: 0 auto;'>
+    <!-- <h1>Contacto</h1> -->
+    <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12 m12 l4">
+              <input id="first_name" type="text" class="validate">
+              <label for="first_name">Nombre</label>
+            </div>
+            <div class="input-field col s12 m12 l4">
+              <input id="email" type="email" class="validate">
+              <label for="email">Email</label>
+            </div>
+            <div class="input-field col s12 m12 l4">
+              <select id="motivo">
+                <option value="emprendedores">Emprendedores</option>
+                <option {{investorSelected}} value="inversionistas">Inversionistas</option>
+                <option value="otros">Otros</option>
+              </select>
+              <label for="motivo">Motivo</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field  col s12">
+              <textarea id="message"  class="validate materialize-textarea"></textarea> 
+              <label for="Mensaje">Mensaje</label>
+            </div>
+          </div>
+          {{> reCAPTCHA}}
+          <br>
+          <button class="btn waves-effect waves-light red" type="submit" name="action">Enviar
+          </button>
+        </form>
+      </div>
+  </div>
+  {{>footer}}
+</template>

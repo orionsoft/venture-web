@@ -1,9 +1,9 @@
-orion.dictionary.addDefinition('homeText', 'home', {
+orion.dictionary.addDefinition('text', 'home', {
     type: String,
-    label: "Text"
+    label: 'Text'
 });
 
-orion.dictionary.addDefinition('homeImage', 'home', 
+orion.dictionary.addDefinition('image', 'home',
 	orion.attribute('file', {
         label: 'Image'
     })
@@ -16,50 +16,50 @@ orion.dictionary.addDefinition('bannerHeight', 'home', {
 
 orion.dictionary.addDefinition('homeInvestText', 'home', {
     type: String,
-    label: "Invest Text"
+    label: 'Invest Text'
 });
 
 orion.dictionary.addDefinition('homeInvestLink', 'home', {
     type: String,
-    label: "Invest Link"
+    label: 'Invest Link'
 });
 
 orion.dictionary.addDefinition('homeRaiseCapitalText', 'home', {
     type: String,
-    label: "Raise Capital Text"
+    label: 'Raise Capital Text'
 });
 
 orion.dictionary.addDefinition('homeRaiseCapitalLink', 'home', {
     type: String,
-    label: "Raise Capital Link"
+    label: 'Raise Capital Link'
 });
 
 orion.dictionary.addDefinition('numbersSuccesfullyFunded', 'home', {
     type: String,
-    label: "Succesfully Funded - Number"
+    label: 'Succesfully Funded - Number'
 });
 
 orion.dictionary.addDefinition('textSuccesfullyFunded', 'home', {
     type: String,
-    label: "Succesfully Funded - Text"
+    label: 'Succesfully Funded - Text'
 });
 
 orion.dictionary.addDefinition('numbersRegisteredInvestors', 'home', {
     type: String,
-    label: "Registered Investors - Number"
+    label: 'Registered Investors - Number'
 });
 
 orion.dictionary.addDefinition('textRegisteredInvestors', 'home', {
     type: String,
-    label: "Registered Investors - Text"
+    label: 'Registered Investors - Text'
 });
 
 orion.dictionary.addDefinition('numbersFundedBusiness', 'home', {
     type: String,
-    label: "Funded Business - Number"
+    label: 'Funded Business - Number'
 });
 
 orion.dictionary.addDefinition('textFundedBusiness', 'home', {
     type: String,
-    label: "Funded Business - Text"
+    label: 'Funded Business - Text'
 });

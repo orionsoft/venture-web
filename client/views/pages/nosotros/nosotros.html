@@ -1,0 +1,56 @@
+<template name="nosotros">
+  <div class="parallax-container row  valign-wrapper" style="height:400px; ">
+    <h1 class="valign " style="margin:auto;">Sobre nosotros</h1>
+    <div class="parallax">
+    <img src="https://d33wubrfki0l68.cloudfront.net/img/97a76c037453e9facc0b0dd856c6755264a2a1bb/grid-bg-1.jpg">
+    </div>
+  </div>
+  <div style='width: 80%; margin: 0 auto;'>
+      <h5 class='nosotros-description-tx'>Somos un equipo de emprendedores seriales, con más de ocho años de experiencia en la industria financiera, que
+busca educar y conectar inversionistas con buenas oportunidades de inversión de forma transparente, segura y
+exitosa.</h5>
+    <h2 class="page-title">Directores</h2>
+    <hr/>
+
+      <div class="row  " style="max-width: 1200px;">
+        {{# each managers }}
+          {{>card}}
+        {{/ each }}
+      </div>
+      
+    <br/><br/>
+   
+
+  <h2 class="page-title">Equipo</h2>
+    <hr/>
+
+      <div class="row staff-container " style="max-width: 1200px; ">
+        {{# each team }}
+          {{>card}}  
+        {{/ each }}
+      </div>
+  </div>
+  {{>footer}}
+</template>
+
+
+<template name="card">
+  <div class="col s12 m6 l4" style="padding: 10px; ">
+    
+   <div class="card small team-card hoverable ">
+    <div class="card-content ">
+      <img style="max-width:150px; max-height: 150px; "  src="{{ image.url }}">
+      <span class="card-title activator grey-text text-darken-4" style="display:block">{{ name }}</span>
+
+      <small style="display:inline-block">{{ role }}</small> <br/>
+      <a href="{{linkedin}}" class="btn-floating black darken-1" target="_blank" >
+        <i class="fa fa-linkedin"></i>
+      </a>
+      <a href="{{twitter}}" class="btn-floating black darken-1 " target="_blank" >
+        <i class="fa fa-twitter"></i>
+      </a>
+    </div>
+
+   </div>
+  </div>
+</template>

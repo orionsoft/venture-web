@@ -1,0 +1,57 @@
+<template name="menu">
+  <div class="menu grey lighten-4 animated {{animation}}" style="position: fixed; z-index: 1000; height:100%; width:100%; visibility: {{display}};">
+      <div class="row center">
+        <div class="col-md-12">
+          <div class="close-button js-close-more-menu -open -animate closeBtn" style="margin-top:40px">{{> iconcross}}</div>
+          <ul class="show-on-medium-and-down hide-on-large-only collapsible"  data-collapsible="expandable">
+            <li>
+            <div class="collapsible-header" >Capital de riesgo</div>
+            <div class="collapsible-body"> 
+            <ul >
+              <li><a href="/capital-de-riesgo/red-angel" class="   black-text" >Red Ángel</a></li>
+              <li><a href="/capital-de-riesgo/raicap" class="   black-text" >Raicap - Fondo de Inversión</a></li>
+            </ul>
+            </div>
+            </li>
+          </ul>
+
+
+          <ul class='main_list ' style="margin-top:60px; position: relative;">
+            <li class="show-on-medium-and-down hide-on-large-only"><a href='/intermediacion' >Intermediación</a></li>
+            <li class="show-on-medium-and-down hide-on-large-only"><a >Inmobiliario</a></li>
+            <li><a href="/nosotros">Sobre nosotros</a></li>
+            <li><a href="/prensa">Prensa</a></li>
+            <!-- <li><a href="" >Servicio</a></li> -->
+            <li><a href="/contact">Contacto</a></li>
+          </ul>
+          <ul class="second_list" style="margin-top:40px">
+            <li><a href="">Login ></a></li>
+            <li><a href="">Registrarse ></a></li>
+          </ul>
+        </div>
+        <div class="sociales">
+
+          <a href="https://www.linkedin.com/company/sociedad-administradora-venture-capital-s-a-" class="btn-floating black darken-1" target="_blank" >
+        <i class="fa fa-linkedin"></i>
+      </a>
+      <a href="https://www.facebook.com/VentureCap
+
+" class="btn-floating black darken-1 " target="_blank" >
+        <i class="fa fa-facebook"></i>
+      </a>          
+      <a href="https://twitter.com/_VentureCap_" class="btn-floating black darken-1" target="_blank" >
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a href="https://angel.co/raicap" class="btn-floating black darken-1 " target="_blank" >
+        <i class="fa fa-angellist"></i>
+      </a>      
+      <a href="https://www.crunchbase.com/organization/raicap" class="btn-floating black darken-1 white-text " target="_blank" >
+        <strong> 
+        CB
+        </strong>
+      </a>
+        </div>
+      </div>
+
+  </div>
+</template>
