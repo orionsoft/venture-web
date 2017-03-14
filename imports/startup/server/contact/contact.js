@@ -21,7 +21,7 @@ Meteor.methods({
         text = `Nombre: ${data.first_name}\nMotivo:${data.motivo}\nEmail: ${data.email}\nMensaje:\n${data.message}`
       }
       Email.send({
-        to: to || 'rod@orionsoft.io',
+        to: to || 'info@venturecapital.cl',
         from: 'info@venturecapital.cl',
         subject: `Email de contacto, motivo: ${data.motivo}`,
         text: text

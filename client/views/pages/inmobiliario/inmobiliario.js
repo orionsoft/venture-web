@@ -74,7 +74,7 @@ Template.inmobiliario.events({
     var captchaData = grecaptcha.getResponse()
     console.log(message, captchaData)
     if (captchaData) {
-      Meteor.call('contact.sendEmail', message, captchaData, 'rod@orionsoft.io', (error) => {
+      Meteor.call('contact.sendEmail', message, captchaData, 'david@venturecapital.cl', (error) => {
         if (error) {
           console.log('There was an error: ' + error.reason)
           Materialize.toast('Mensaje no enviado, '+error.reason, 4000)
