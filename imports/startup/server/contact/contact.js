@@ -1,10 +1,8 @@
 import {Meteor} from 'meteor/meteor'
-import { Email } from 'meteor/email'
+import {Email} from 'meteor/email'
 
 Meteor.methods({
-  'contact.sendEmail' (data, captchaData, to) {
-    console.log(data)
-
+  'contact.sendEmail'(data, captchaData, to) {
     this.unblock()
     var verifyCaptchaResponse = reCAPTCHA.verifyCaptcha(this.connection.clientAddress, captchaData)
 
@@ -13,19 +11,25 @@ Meteor.methods({
       throw new Meteor.Error(422, 'reCAPTCHA Failed: ' + verifyCaptchaResponse.error)
     } else {
       console.log('reCAPTCHA verification passed!')
-      let text
-      if (!data.motivo) {
-        data.motivo = 'Formulario Inmobiliario'
-        text = `Nombres: ${data.names}\nApellidos:${data.lastName}\nEmail: ${data.email}\nRenta Mensual Liquida:${data.monthlySalary}\nCapacidad de Ahorro Mensual: ${data.monthlySavings}\nCapacidad de Cuota Mensual: ${data.monthlyPayments}\nMensaje: ${data.message}`
+      if (data.motivo) {
+        SSR.compileTemplate('htmlEmail', Assets.getText('templates/template.html'))
+
+        Email.send({
+          to: to || 'diegoolavarriau@orionsoft.io', //willy@venturecapital.cl diegoolavarriau@orionsoft.io
+          from: 'info@venturecapital.cl',
+          subject: `Email de contacto, motivo: ${data.motivo}`,
+          html: SSR.render('htmlEmail', data)
+        })
       } else {
-        text = `Nombre: ${data.first_name}\nMotivo:${data.motivo}\nEmail: ${data.email}\nMensaje:\n${data.message}`
+        SSR.compileTemplate('htmlEmail', Assets.getText('templates/templateInmobiliario.html'))
+
+        Email.send({
+          to: to || 'willy@venturecapital.cl', //willy@venturecapital.cl diegoolavarriau@orionsoft.io
+          from: 'info@venturecapital.cl',
+          subject: `Email de contacto, motivo: ${data.motivo}`,
+          html: SSR.render('htmlEmail', data)
+        })
       }
-      Email.send({
-        to: to || 'info@venturecapital.cl',
-        from: 'info@venturecapital.cl',
-        subject: `Email de contacto, motivo: ${data.motivo}`,
-        text: text
-      })
     }
     return true
   }

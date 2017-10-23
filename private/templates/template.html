@@ -1,0 +1,90 @@
+<html lang="es">
+  <head>
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+  	<meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+  </head>
+  <body>
+    <div class="header">
+      <img class="logo" src="http://venturecapital.cl/images/VENTURE.png" width="300" alt="Logo" />
+    </div>
+    <div class="content">
+      <div class="content-inner">
+        <table border="0" cellpadding="0" cellspacing="0" style="margin:0;text-align:center;background-color:rgb(107,34,3)" width="100%">
+          <tbody>
+            <tr height="32px">
+            </tr>
+            <tr>
+              <td>
+                <img alt="Formularios de Google" height="26px" style="display:inline-block;margin:0;vertical-align:middle" width="143px" src="imageproxy?token=4c71839f2e64de227353acfb78c829a24dc00bdad387279edfc1bea4e1acd69c&amp;url=http://venturecapital.cl/images/VENTURE.png">
+              </td>
+            </tr>
+            <tr height="16px">
+            </tr>
+            <tr>
+              <td>
+                <div style="color:#fff;font-size:24px;font-weight:400">
+                  Nueva consulta
+                </div>
+              </td>
+            </tr>
+            <tr height="32px">
+            </tr>
+          </tbody>
+        </table>
+        <div style="padding:0 48px" width="100%">
+          <table align="center" cellpadding="0" cellspacing="0" style="max-width:528px;min-width:154px" width="100%">
+            <tbody>
+              <tr height="48px">
+              </tr>
+              <tr>
+                <td style="color:#333;font-size:13px;font-weight:400">
+                  Hay una consulta realizada a través de
+                  <a href="http://venturecapital.cl/contact" target="_blank" title="This external link opens in a new window">
+                    Venture Capital
+                  </a>
+                  .
+                </td>
+              </tr>
+              <tr height="24px">
+              </tr>
+              <tr>
+                <td>
+                  <table align="center" cellpadding="0" cellspacing="0" style="max-width:528px;min-width:154px;background-color:#fafafa;padding-left:24px" width="100%">
+                    <tbody>
+                      <tr height="32px">
+                        <td>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div>
+                              <p>Enviado por: {{ first_name }} </p>
+                              <p>Motivo: {{ motivo }}</p>
+                              <p>Correo: {{ email }}</p>
+                              <p>Mensaje: {{ message }}</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr height="48px">
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr height="48px">
+              </tr>
+              <tr height="24px">
+                <td style="border-top:1px solid #bdbdbd">
+                </td>
+              </tr>
+              <tr height="96px">
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
