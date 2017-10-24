@@ -15,7 +15,7 @@ Meteor.methods({
         SSR.compileTemplate('htmlEmail', Assets.getText('templates/template.html'))
 
         Email.send({
-          to: to || 'diegoolavarriau@orionsoft.io', //willy@venturecapital.cl diegoolavarriau@orionsoft.io
+          to: to || 'willy@venturecapital.cl', //willy@venturecapital.cl diegoolavarriau@orionsoft.io
           from: 'info@venturecapital.cl',
           subject: `Email de contacto, motivo: ${data.motivo}`,
           html: SSR.render('htmlEmail', data)
