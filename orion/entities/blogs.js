@@ -22,6 +22,10 @@ Blogs.attachSchema(
       type: String,
       label: 'Title'
     },
+    url: {
+      type: String,
+      label: 'Url'
+    },
     content: {
       type: String,
       label: 'Content'
