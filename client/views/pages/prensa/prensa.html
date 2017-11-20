@@ -6,8 +6,7 @@
   <div class='main-container row'>
   {{# each post }}
     <a target="'_blank" href={{url}}>
-  <div class="col m1 l2"></div>
-  <div class="card medium col s12 m10 l8 hoverable">
+  <div class="card medium col s12 m10 offset-m1 l8 offset-l2 hoverable">
     <div class="card-image">
       <img src={{image.url}}>
     </div>
@@ -19,7 +18,6 @@
       {{> social_buttons url=url text=title}}
     </div>
   </div>
-  <div class="col m1 l2"></div>
   </a>
   {{/each}}
   </div>
