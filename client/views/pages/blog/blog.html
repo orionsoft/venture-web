@@ -1,21 +1,22 @@
 <template name="blog">
   <div class="parallax-container row valign-wrapper main-section-container">
-    <h1 class="valign" style="margin:auto;">{{dict "blog.title"}}</h1>
+    <h1 class="valign" style="margin:auto;">Blog</h1>
     <div class="parallax"><img src="https://d33wubrfki0l68.cloudfront.net/img/97a76c037453e9facc0b0dd856c6755264a2a1bb/grid-bg-1.jpg"></div>
   </div>
   <div class='main-container row'>
   {{# each blog }}
     <a target="'_blank" href={{url}}>
-      <div class="card horizontal col s12 m10 offset-m1 l8 offset-l2 hoverable">
+      <div class="card col s12 m10 offset-m1 l8 offset-l2 hoverable">
         <div class="card-image">
-          <img src={{image.url}}>
+          <img class="activator" src={{image.url}}>
         </div>
         <div class="card-content">
-          <h5>{{title}}</h5>
-          <p>{{content}}</p>
+          <span class="card-title activator grey-text text-darken-4">{{title}}<i class="material-icons right">more_vert</i></span>
+          <p>{{> social_buttons url=url text=title}}</p>
         </div>
-        <div class="card-action">
-          {{> social_buttons url=url text=title}}
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">{{title}}<i class="material-icons right">close</i></span>
+          <p>{{content}}</p>
         </div>
       </div>
   </a>
