@@ -7,7 +7,7 @@ Template.blog.onRendered(function() {
   this.subscribe('Blogs')
 })
 Template.blog.helpers({
-  post: function() {
+  blog: function() {
     return Blogs.find({}, {sort: {createdAt: -1}}).fetch()
   }
 })
